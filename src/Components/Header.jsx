@@ -18,19 +18,18 @@ const Header = () => {
             });
     };
 
-    // NavLink এর জন্য ক্লাসName ফাংশন, active হলে আলাদা style দিবে
     const navLinkClass = ({ isActive }) =>
         isActive
             ? "active hover:text-yellow-300 duration-300"
             : "hover:text-yellow-300 duration-300";
 
     return (
-        <div className='flex justify-between items-center px-10 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-md'>
+        <div className='flex flex-col md:flex-row justify-between items-center px-4 md:px-10 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-md gap-4 md:gap-0'>
             <div>
-                <img src={logo} alt="Logo" className="w-30 h-auto" />
+                <img src={logo} alt="Logo" className="w-28 md:w-30 h-auto" />
             </div>
 
-            <div className='nav flex gap-8 text-lg font-semibold'>
+            <div className='nav flex flex-col md:flex-row gap-4 md:gap-8 text-lg font-semibold text-center'>
                 <NavLink to="/" className={navLinkClass}>Home</NavLink>
                 <NavLink to="/all-courses" className={navLinkClass}>All Courses</NavLink>
                 <NavLink to="/add-courses" className={navLinkClass}>Add Courses</NavLink>

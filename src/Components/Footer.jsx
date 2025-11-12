@@ -3,14 +3,14 @@ import logo from "../assets/logo.webp";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center bg-primary text-primary-content px-12 py-10 flex-wrap h-[200px]">
-      {/* Left: Logo */}
+    <footer className="flex flex-col md:flex-row justify-between items-center bg-primary text-primary-content px-6 md:px-12 py-10 gap-6 md:gap-0 min-h-[200px]">
+      
       <div className="flex items-center gap-3">
         <img src={logo} alt="Logo" className="w-20 h-auto" />
       </div>
 
-      {/* Middle: Text */}
-      <div className="text-center leading-relaxed">
+      
+      <div className="text-center md:text-left leading-relaxed max-w-md">
         <p className="font-bold text-lg">
           ACME Industries Ltd.
           <br />
@@ -21,10 +21,10 @@ const Footer = () => {
         </p>
       </div>
 
-      {/* Right: Social Links */}
+      
       <div className="flex gap-5">
-        {/* Twitter */}
-        <a href="#">
+        
+        <a href="#" aria-label="Twitter">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" className="fill-current">
             <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 
             1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 
@@ -41,7 +41,7 @@ const Footer = () => {
         </a>
 
         {/* YouTube */}
-        <a href="#">
+        <a href="#" aria-label="YouTube">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" className="fill-current">
             <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 
             0-3.897.266-4.356 2.62-4.385 
@@ -53,8 +53,8 @@ const Footer = () => {
           </svg>
         </a>
 
-        {/* Facebook */}
-        <a href="#">
+        
+        <a href="#" aria-label="Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" className="fill-current">
             <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 
             1.115-1.333h2.885v-5h-3.808c-3.596 
