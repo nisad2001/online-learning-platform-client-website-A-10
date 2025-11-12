@@ -10,6 +10,7 @@ import UpdateCourses from "../pages/UpdateCourses";
 import Home from "../pages/Home";
 import MyCourses from "../pages/MyCourses";
 import PrivateRoute from "../routes/PrivateRoute";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -75,7 +76,7 @@ const router = createBrowserRouter([
 
       {
         path: "/*",
-        element: <h1>Error layout</h1>,
+        element: <ErrorPage></ErrorPage>
       },
     ],
   },

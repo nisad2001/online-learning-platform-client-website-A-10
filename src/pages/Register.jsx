@@ -14,19 +14,29 @@ const Register = () => {
         const photo = e.target.photo.value;
         const password = e.target.password.value;
         console.log({name,email, photo, password});
+
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
+
+        if (!emailRegex.test(email)) {
+            return alert("❌ Please enter a valid email address!");
+        }
+
+        if (!passwordRegex.test(password)) {
+            return alert("❌ Password must be at least 8 characters, include upper & lowercase letters, a number, and a special character.");
+        }
+
         createUser(email, password)
         .then(result=>{
             const user = result.user;
-            
             setUser(user)
          }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage)
         });
-        
     }
-
 
     return (
          <div className='flex justify-center min-h-screen items-center bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700'>
